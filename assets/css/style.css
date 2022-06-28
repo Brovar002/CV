@@ -963,6 +963,9 @@ button {
   .about-me__job {
     font-size: 60px;
   }
+  .facts__quantity {
+    font-size: 56px;
+  }
 
   .projects__title {
     font-size: 24px;
@@ -998,6 +1001,18 @@ button {
 
   .languages__list{
     column-gap: 0;
+  }
+  .facts__list {
+    column-gap: 0;
+  }
+
+  .facts__quantity {
+    font-size: 48px;
+  }
+
+  .facts__desc,
+  .languages__level {
+    font-size: 16px;
   }
 
 }
@@ -1096,6 +1111,10 @@ button {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .facts__quantity {
+    font-size: 48px;
+    line-height: 1;
+  }
 }
 
 @media (max-width: 360px) {
@@ -1175,4 +1194,29 @@ button {
   .btn--to-top {
     display: none;
   }
+}
+.facts__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 28px;
+  grid-template-rows: repeat(2, auto);
+}
+
+.facts__quantity {
+  grid-row: 1 / 2;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-size: 64px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.facts__quantity::before {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 10px;
+  background-color: var(--accent);
+  top: 0;
 }
